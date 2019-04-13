@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="section">
+        <div class="block">
+            <div class="title"><span>Удивительный факт!</span></div>
+            <div class="card"><p>   У актиний рот может  
+                растягиваться настолько, что это 
+                морское животное вполне способно 
+                принимать в пищу добычу таких 
+                же размеров, как и они сами.</p>
+                <img src="actinia.jpg" alt="">
+            </div>
+            
+        </div>
+    </div>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .section {
+            height: 100vh;
+            background-color: #7b1fa2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .block {
+            transition: 0.2s;
+            border-radius: 7px;
+            width: 250px;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .title {
+            background-color: #ffffff;
+            width: 250px;
+            height: 35px;
+            border-radius: 7px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card p {
+            padding-left: 20px;
+        }
+
+        .card {
+            transition: 0.4s;
+            transform: translateY(-100%);
+            transform-origin: top center;
+            width: 250px;
+            height: 350px;
+            background-color: #ffffff;
+            margin-top: -5px;
+            padding-top: 5px;
+            padding-right: 10px;
+            opacity: 0;
+        }
+
+        .title:hover ~ .card, .card:hover {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    
+    </style>
+</body>
+</html>
